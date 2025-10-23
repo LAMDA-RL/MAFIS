@@ -1,0 +1,32 @@
+# --- MAFIS specific parameters ---
+
+action_selector: "soft_policies"
+mask_before_softmax: True
+
+runner: "episode"
+
+obs_agent_id: False
+obs_last_action: False
+obs_individual_obs: False
+
+agent_output_type: "pi_logits"
+learner: "iq_learner"
+mixer: "mix"
+div: "tot"
+use_rnn: True
+mixing_embed_dim: 256
+alpha: 0.2
+dropout: 0.5
+epoch: 2
+
+name: "MAFIS_online"
+offline: False
+demo: True
+demo_size: 100
+
+test_nepisode: 100
+test_interval: 10000
+log_interval: 10000
+runner_log_interval: 10000
+learner_log_interval: 10000
+t_max: 1005000

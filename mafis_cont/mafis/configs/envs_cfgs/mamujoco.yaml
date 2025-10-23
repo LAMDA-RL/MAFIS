@@ -1,0 +1,4 @@
+scenario: Ant-v2 # Walker2d-v2 2x3 HalfCheetah-v2 2x3 Ant-v2 2x4
+agent_conf: 2x4
+agent_obsk: 0 # We use the fully observable setting, so this argument is not useful. But we still keep it.
+episode_limit: 1000

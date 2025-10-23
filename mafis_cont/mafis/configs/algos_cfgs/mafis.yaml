@@ -1,0 +1,76 @@
+# This is the configuration file for the HASAC algorithm.
+seed:
+  # whether to use the specified seed
+  seed_specify: True
+  # seed
+  seed: 1
+device:
+  # whether to use CUDA
+  cuda: True
+  # whether to set CUDA deterministic
+  cuda_deterministic: True
+  # arg to torch.set_num_threads
+  torch_threads: 32
+train:
+  sample_num: 20
+  # number of parallel environments for training data collection
+  n_rollout_threads: 20
+  # number of total steps
+  num_env_steps: 5000000
+  # number of warmup steps
+  warmup_steps: 100000
+  # number of steps per train
+  train_interval: 50
+  # ratio of training iterations to train_interval
+  update_per_train: 5
+  # evaluation interval
+  eval_interval: 1000
+  # whether to use linear learning rate decay
+  use_linear_lr_decay: False
+  # whether to consider the case of truncation when an episode is done
+  use_proper_time_limits: True
+  # if set, load models from this directory; otherwise, randomly initialise the models
+  model_dir: ~
+eval:
+  # whether to use evaluation
+  use_eval: True
+  # number of parallel environments for evaluation
+  n_eval_rollout_threads: 20
+  # number of episodes per evaluation
+  eval_episodes: 40
+render:
+  # whether to use render
+  use_render: False
+  # number of episodes to render
+  render_episodes: 10
+model:
+  # network parameters
+  # hidden sizes for mlp module in the network
+  hidden_sizes: [256, 256]
+  # activation function, choose from sigmoid, tanh, relu, leaky_relu, selu
+  activation_func: relu
+  # optimizer parameters
+  # critic learning rate
+  critic_lr: 0.0005
+algo:
+  # temperature parameter
+  alpha: 0.5
+  # discount factor
+  gamma: 0.99
+  # off-policy buffer size
+  buffer_size: 1000000
+  # training batch size
+  batch_size: 1000
+  # train noise for sampling
+  noise: 0.5
+  # coefficient for target model soft update
+  polyak: 0.005
+  # the number of steps to look ahead
+  n_step: 1
+  # langevin dynamics steps
+  langevin_steps: 25
+  # langevin step size
+  langevin_step_size: 0.5 
+logger:
+  # logging directory
+  log_dir: "./results"

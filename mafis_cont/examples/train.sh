@@ -1,0 +1,1 @@
+python train.py --algo mafis --env mamujoco --exp_name any_name

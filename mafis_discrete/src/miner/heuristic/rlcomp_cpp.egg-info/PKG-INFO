@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: rlcomp_cpp
+Version: 1.0.4
+Summary: RLComp C++ Wrapper
+Author: VietBT
+Author-email: tvbui@smu.edu.sg
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary

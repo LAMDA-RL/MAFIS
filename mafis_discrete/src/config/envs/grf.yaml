@@ -1,0 +1,30 @@
+env: "grf"
+
+env_args:
+  key: null
+  env_name: ~
+  stacked: False
+  representation: "simple115v2"
+  rewards: "scoring,checkpoints"
+  write_goal_dumps: False
+  write_full_episode_dumps: False
+  render: False
+  write_video: False
+  dump_frequency: 1
+  logdir: ~
+  extra_players: ~
+  number_of_left_players_agent_controls: 2 # has to be consistent with the default setting below
+  number_of_right_players_agent_controls: 0
+  channel_dimensions:
+    - 96
+    - 72
+  other_config_options: ~
+
+
+test_greedy: True
+test_nepisode: 100
+test_interval: 50000
+log_interval: 50000
+runner_log_interval: 10000
+learner_log_interval: 10000
+t_max: 8050000
