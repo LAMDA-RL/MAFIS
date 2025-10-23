@@ -1,6 +1,6 @@
 # [NeurIPS 2025] Multi-Agent Imitation by Learning and Sampling from Factorized Soft Q-Function
 
-If you find our work helpful, please consider citing via
+If you find [our work](https://openreview.net/forum?id=RbkHARGCcH) helpful, please consider citing via
 
 ```bib
 @inproceedings{mafis,
