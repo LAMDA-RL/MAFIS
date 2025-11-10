@@ -178,6 +178,7 @@ class SoftTwinContinuousQCritic(TwinContinuousQCritic):
 
         return grad_loss, grad_norm_mean
 
+@torch.compile
 def langevin_mcmc_s_a(
         network,
         obs,

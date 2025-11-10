@@ -2,18 +2,14 @@
 
 ```bash
 # venv
-conda create -n MAFIS python=3.7 -y
-conda activate MAFIS
-pip install torch torchvision torchaudio
-pip install sacred numpy scipy matplotlib seaborn pyyaml pygame pytest probscale imageio snakeviz tensorboard-logger tensorboard tensorboardx h5py
-pip install setuptools==65.5.0
-pip install --user wheel==0.38.0
-pip install gym==0.21.0
-pip install importlib-metadata==4.13.0
-pip install -e .
-pip install mujoco_py
-pip install Cython==0.29.37
-pip install jinja2
+# recommend using Python 3.7
+uv venv
+source .venv/bin/activate
+uv pip install torch torchvision torchaudio
+uv pip install sacred numpy scipy matplotlib seaborn pyyaml pygame pytest probscale imageio snakeviz tensorboard-logger tensorboard tensorboardx h5py
+uv pip install gym==0.22.0
+uv pip install importlib-metadata mujoco_py Cython jinja2
+uv pip install -e .
 # MuJoCo
 cd ~/
 wget https://mujoco.org/download/mujoco210-linux-x86_64.tar.gz
